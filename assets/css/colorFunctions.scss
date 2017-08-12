@@ -1,0 +1,9 @@
+$cor-vermelha: red;
+$cor-vermelha-claro: lighten($cor-vermelha, 20%);
+$cor-vermelha-escuro: darken($cor-vermelha, 20%);
+
+$fundoBanner: saturate($cor-vermelha, 10%);
+$fundoBannerUnsaturate: unsaturate($cor-vermelha, 10%);
+
+// $vermelhoOpaco: fade-in($cor-vermelha, .3);
+
