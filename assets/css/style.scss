@@ -1,6 +1,8 @@
 @import "mixins";
-@import "./colorFunctions";
+@import "colorFunctions";
 
+
+//MIXIN
 @mixin borda-arredondada {
   -webkit-box-shadow: 10px 10px 15px 0.35px rgba(0,0,0,0.3);
   box-shadow: 10px 10px 15px 0.35px rgba(0,0,0,0.3);
@@ -11,6 +13,18 @@
     -moz-border-radius: $radius;
      -ms-border-radius: $radius;
          border-radius: $radius;
+}
+
+//EXTEND
+.message {
+  border: 1px solid red;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
 }
 
 //interpolation
@@ -35,6 +49,13 @@ $root: "../img/";
 // .botao {
 //   @include borda-arredondada;
 // }
+
+.quadrado {
+  @include border-radius(20px);
+  height: 200px;
+  width: 200px;
+  background-color: $cor-vermelha-escuro;
+}
 
 
 

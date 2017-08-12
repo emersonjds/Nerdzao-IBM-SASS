@@ -1,3 +1,11 @@
+.message, .success {
+  border: 1px solid red;
+  padding: 10px;
+  color: #333; }
+
+.success {
+  border-color: green; }
+
 .box {
   height: 50%;
   width: 50%;
@@ -10,5 +18,14 @@
   border: 1px solid black;
   background-size: 100% 100%;
   background-repeat: no-repeat; }
+
+.quadrado {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  height: 200px;
+  width: 200px;
+  background-color: #990000; }
 
 /*# sourceMappingURL=style.css.map */

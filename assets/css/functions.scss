@@ -1,0 +1,9 @@
+$aapp-width:900px;
+
+@function column-width($cols) {
+  @return ($app-width / $cols);
+}
+
+.col3 {
+  width: column-width(3)
+}
