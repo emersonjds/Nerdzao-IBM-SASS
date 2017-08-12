@@ -1,4 +1,20 @@
+@import "mixins";
 @import "./colorFunctions";
+
+@mixin borda-arredondada {
+  -webkit-box-shadow: 10px 10px 15px 0.35px rgba(0,0,0,0.3);
+  box-shadow: 10px 10px 15px 0.35px rgba(0,0,0,0.3);
+}
+
+@mixin border-radius($radius) {
+ -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+     -ms-border-radius: $radius;
+         border-radius: $radius;
+}
+
+//interpolation
+$root: "../img/";
 
 .box {
   height: 50%;
@@ -6,3 +22,22 @@
   border: 1px solid black;
   background-color: $cor-vermelha-claro;
 }
+
+.box2{
+  height: 350px;
+  width: 500px;
+  border: 1px solid black;
+  // background: url('#{$root}meetup.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+// .botao {
+//   @include borda-arredondada;
+// }
+
+
+
+
+
+
