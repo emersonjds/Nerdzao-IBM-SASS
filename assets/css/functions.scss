@@ -1,4 +1,4 @@
-$aapp-width:900px;
+$app-width:900px;
 
 @function column-width($cols) {
   @return ($app-width / $cols);
