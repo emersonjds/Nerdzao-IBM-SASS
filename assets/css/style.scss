@@ -1,22 +1,28 @@
-@import "mixins";
-@import "colorFunctions";
+@import "./mixins";
+@import "./mixins";  
 
+$root: "../img/";
+$cinza : lightgray;
+// background: url('#{$root}meetup.jpg');
+$tamanho-fonte :12px;
 
-//MIXIN
-@mixin borda-arredondada {
-  -webkit-box-shadow: 10px 10px 15px 0.35px rgba(0,0,0,0.3);
-  box-shadow: 10px 10px 15px 0.35px rgba(0,0,0,0.3);
+body , html {
+  @include full;
+  background-color: $cinza;
 }
 
-@mixin border-radius($radius) {
- -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-     -ms-border-radius: $radius;
-         border-radius: $radius;
-}
+.box {
+  background-color: $cinza;
+  height: 400px;
+  width: 500px;
+  background-color: yellow;
+  @include flex;
+  @include flex-center;
+  justify-content: flex-start;
+  @include border-radius(20px);
+  }
 
-//EXTEND
-.message {
+  .message {
   border: 1px solid red;
   padding: 10px;
   color: #333;
@@ -25,40 +31,36 @@
 .success {
   @extend .message;
   border-color: green;
+  background-color: lightgreen;
 }
 
-//interpolation
-$root: "../img/";
-
-.box {
+.box2 {
+  // background: url('#{$root}1.png');
   height: 50%;
   width: 50%;
-  border: 1px solid black;
-  background-color: $cor-vermelha-claro;
-}
-
-.box2{
-  height: 350px;
-  width: 500px;
-  border: 1px solid black;
-  // background: url('#{$root}meetup.jpg');
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  border: 1px solid black;
 }
 
-// .botao {
-//   @include borda-arredondada;
-// }
+.box3 {
+  height: 500px;
+  width: 500px;
+  background-color: gray;
+  z-index: 3;
+  @include flex;
+  @include flex-center;
+  .box-4 {
+    height: 400px;
+    width: 400px;
+    background-color: orange;
+    z-index: 2;
+    @extend .box3;
 
-.quadrado {
-  @include border-radius(20px);
-  height: 200px;
-  width: 200px;
-  background-color: $cor-vermelha-escuro;
+    .box-5{
+      width: 300px;
+      height: 300px;
+      background-color: blue;
+      z-index: 1;
+    }
+  }
 }
-
-
-
-
-
-
